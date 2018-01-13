@@ -1,0 +1,7 @@
+<div class="">
+    <form class="testing" [formGroup]="calculator" (ngSubmit)="calculate(calculator.value.salary)">
+        <input formControlName="salary" type="text" placeholder="Your salary" />
+        <input type="submit" (click)="calculate(testing.salary)" />
+        {{this.incomeTax}}
+    </form>
+</div>
