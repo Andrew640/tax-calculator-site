@@ -10,8 +10,8 @@ export class CalculatorComponent {
 
   constructor(public fb: FormBuilder) {}
 
-  // incomeTaxPercentage: number;
   incomeTax = 0;
+  takeHome = 0;
   taxableIncome: number;
   band3Tax;
   band4Tax;
@@ -21,20 +21,28 @@ export class CalculatorComponent {
   });
 
   calculate(salary: number) {
-    console.log(salary);
-    if (salary <= 11500) {
+    if (salary == null || salary < 0) {
+      this.takeHome = 0;
+      this.incomeTax = 0;
+    }
+    if (salary && salary <= 11500 && salary > 0) {
+      this.takeHome = salary;
       this.incomeTax = 0;
     }
     if (salary > 11500 && salary <= 45000 ) {
       this.incomeTax = (salary - 11500) * 0.2;
+      this.takeHome = salary - this.incomeTax;
     }
     if (salary > 45000 && salary <= 150000) {
       this.band3Tax = (salary - 45000) * 0.4;
       this.incomeTax = this.band3Tax + 6700;
+      this.takeHome = salary - this.incomeTax;
     }
     if (salary > 150000) {
       this.band4Tax = (salary - 150000) * 0.45;
       this.incomeTax = this.band4Tax + 48700;
+      this.takeHome = salary - this.incomeTax;
     }
   }
+
 }

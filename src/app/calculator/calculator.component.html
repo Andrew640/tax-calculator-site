@@ -1,7 +1,17 @@
-<div class="">
-    <form class="testing" [formGroup]="calculator" (ngSubmit)="calculate(calculator.value.salary)">
-        <input formControlName="salary" type="text" placeholder="Your salary" />
-        <input type="submit" (click)="calculate(testing.salary)" />
-        {{this.incomeTax}}
-    </form>
+<div class="background">
+    <div class="calc">
+        <div class="calc_title">Tax calculator</div>
+        <div class="calc_tax">
+            <span class="calc_tax_type">Income tax</span> <div class="calc_tax_fig">{{this.incomeTax | currency:'GBP':true:'1.2-2'}}</div>
+        </div>
+        <div class="calc_tax">
+            <span class="calc_tax_type">Take home pay</span> <div class="calc_tax_fig">{{this.takeHome | currency:'GBP':'1.2-2'}}</div>
+        </div>
+        <form [formGroup]="calculator" (ngSubmit)="calculate(calculator.value.salary)">
+                <span class="calc_£">£</span> <input class="calc_input" formControlName="salary" type="number" min="0" />
+            <div>
+                <input class="calc_button" type="submit" value="Calculate" />
+            </div>
+        </form>
+    </div>
 </div>

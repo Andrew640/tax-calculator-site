@@ -1,0 +1,72 @@
+@import '../../styles/variables.scss';
+
+.background {
+    background-color:$background2;
+    min-height:100%;
+    min-width:100%;
+}
+
+.calc {
+    text-align:center;
+    width:400px;
+    @media(max-width:400px) {
+        width:310px;
+        padding-top:20px;
+    }
+    margin:0 auto;
+    padding-top: 100px;
+    color:#fff;
+    &_tax {
+        font-size:24px;
+        &_fig{
+            padding-bottom:20px;
+            font-size:40px;
+            @media(max-width:400px) {
+                font-size:30px;
+            }
+        }
+        &_type {
+            color:$background;
+        }
+    }
+    &_title {
+        color:$background;
+        background-color:#fff;
+        font-size:50px;
+        padding:15px 5px;
+        margin-bottom:20px;
+        border: 5px solid $background;
+    }
+    &_£ {
+        display:inline-block;
+        font-size:26px;
+    }
+    &_input {
+        border:none;
+        background-color:#fff;
+        width:350px;
+        height:40px;
+        margin-bottom:30px;
+        border-radius:4px;
+        font-size:22px;
+        color:$background;
+        outline:none;
+        @media(max-width:400px) {
+            width:280px;
+        }
+    }
+    &_button {
+        font-size:24px;
+        border:none;
+        background-color:$background;
+        color:#fff;
+        border-radius:4px;
+        padding:15px 30px;
+        outline:none;
+        margin-bottom:50px;
+        &:hover {
+            cursor:pointer;
+            background-color:$background-op;
+        }
+    }
+}
