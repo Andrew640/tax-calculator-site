@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+
+.lp1 {
+    background-color:$background;
+    text-align:center;
+    padding-top:90px;
+    &_title {
+        color:#fff;
+        border:10px solid #fff;
+        font-size:100px;
+        margin:0 auto;
+        width:550px;
+        padding:15px 20px;
+        @media(max-width:550px) {
+            width:300px;
+            font-size:70px;
+            padding:0px;
+        }
+    }
+    &_text {
+        color:#fff;
+        padding-top:60px;
+        font-size:32px;
+    }
+    &_chevron {
+        color:#fff;
+        font-size:50px;
+        padding-top:90px;
+        padding-bottom:90px;
+    }
+}
+
+.lp2 {
+    background-color:$background2;
+    &_questions {
+        text-align:center;
+        padding-top:90px;
+        padding-bottom:90px;
+        &_q {
+            color:#fff;
+            padding-top:20px;
+            font-size:26px;
+            &_1 {
+                font-size:40px;
+                padding-top:0px;
+                padding-bottom:15px
+            }
+            &_emoji {
+                font-size:40px;
+                padding-top:15px;
+            }
+        }
+    }
+}
+
+.button {
+    font-size:28px;
+    background-color:$red;
+    color:#fff;
+    padding:30px 40px;
+    width:220px;
+    margin:90px auto 0 auto;
+    text-align:center;
+    border:none;
+    &:hover {
+        background-color:$green;
+        color:#fff;
+        cursor:pointer;
+        outline:none;
+    }
+    &_cont {
+        padding-bottom:90px;
+    }
+    &_lp2 {
+        margin-top:0;
+    }
+}
