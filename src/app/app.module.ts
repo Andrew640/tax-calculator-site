@@ -1,5 +1,5 @@
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
