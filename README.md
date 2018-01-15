@@ -1,5 +1,11 @@
 # TaxCalculator
 
+Design has been kept simple with bold, solid and bright colours with 2 call to actions on the landing page to ensure both those who are already sold on the idea and those who need more explanation can easily go through to the calculator.
+
+Copy has been kept short and succinct to ensure easy understanding of the problems which the calculator looks to solve.
+
+The calculator itself is kept basic and crisp to help make such a boring task as fast and as simple as possible.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
 ## Development server
